@@ -1,4 +1,4 @@
-IMAGE ?= "bsundman/cycles-v1.9.1:cpu"
+IMAGE ?= "bsundman/cycles-cpu:v1.9.1"
 
 all: build push
 

@@ -6,7 +6,6 @@ RUN yum -y update; yum -y install epel-release; yum -y install git cmake freeglu
 
 # Cycles binary
 WORKDIR /opt
-#ADD cycles-v1.9.1.tar.gz ./
 RUN git clone -b v1.9.1 git://git.blender.org/cycles.git cycles-v1.9.1 && cd cycles* && make BUILD_CMAKE_ARGS="-D WITH_CYCLES_STANDALONE_GUI=OFF WITH_CUDA_DYNLOAD=OFF" && make install-release
 
 # Remove dev tools
